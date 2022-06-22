@@ -1,21 +1,20 @@
 [build-system]
-requires = ["flit_core>=2,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.flit.metadata]
-module = "fastapi_jwt_auth"
-dist-name = "fastapi-jwt-auth"
-author = "Nyoman Pradipta Dewantara"
-author-email = "nyomanpradipta120@gmail.com"
+module = "fastapi_jwt_auth-latest"
+dist-name = "fastapi-jwt-auth-latest"
+author = ""
+author-email = ["nyomanpradipta120@gmail.com", "internetwasmyidea@gmail.com"]
 home-page = "https://github.com/IndominusByte/fastapi-jwt-auth"
 
 classifiers = [
   "Environment :: Web Environment",
   "Intended Audience :: Developers",
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.6",
-  "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
@@ -23,32 +22,32 @@ classifiers = [
 ]
 
 requires = [
-  "fastapi>=0.61.0",
-  "PyJWT>=1.7.1,<2.0.0"
+"fastapi==0.78.0",
+"PyJWT==2.4.0"
 ]
 
 description-file = "README.md"
-requires-python = ">=3.6"
+requires-python = ">=3.8"
 
 [tool.flit.metadata.urls]
 Documentation = "https://indominusbyte.github.io/fastapi-jwt-auth/"
 
 [tool.flit.metadata.requires-extra]
 test = [
-  "pytest==6.0.1",
-  "pytest-cov==2.10.0",
-  "coveralls==2.1.2"
+  "pytest==7.1.2",
+  "pytest-cov==3.0.0",
+  "coveralls==3.3.1"
 ]
 
 doc = [
-  "mkdocs>=1.1.2,<2.0.0",
-  "mkdocs-material>=5.5.0,<6.0.0",
-  "markdown-include>=0.5.1,<0.6.0"
+  "mkdocs==1.3.0",
+  "mkdocs-material==8.3.7",
+  "markdown-include==0.5.1,<0.6.0"
 ]
 
 dev = [
-  "cryptography>=2.6,<4.0.0",
-  "uvicorn>=0.11.5,<0.12.0"
+  "cryptography==37.0.3",
+  "uvicorn==0.17.6"
 ]
 
-asymmetric = ["cryptography>=2.6,<4.0.0"]
+asymmetric = ["cryptography==37.0.3"]
